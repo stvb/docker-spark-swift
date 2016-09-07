@@ -1,5 +1,11 @@
 FROM openjdk
 MAINTAINER steven.vandenberghe@sirris.be
+
+RUN apt-get -y update && \
+    apt-get install -y --no-install-recommends python3 && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
+
 RUN wget http://d3kbcqa49mib13.cloudfront.net/spark-2.0.0.tgz && tar xvzf spark-2.0.0.tgz
 WORKDIR spark-2.0.0
 COPY pom.xml .
