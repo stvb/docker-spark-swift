@@ -1,5 +1,5 @@
 FROM openjdk
-MAINTAINER steven.vandenberghe@sirris.be
+MAINTAINER Steven <steven.vandenberghe@sirris.be>
 
 RUN apt-get -y update && \
     apt-get install -y --no-install-recommends python3 && \
