@@ -25,7 +25,7 @@ WORKDIR dist
 #ready
 ENV PYSPARK_PYTHON=/usr/bin/python3
 ENV PYSPARK_PYTHON=python3
-ENV SPARK_HOME=/spark-2.0.0/dist/bin	
+ENV SPARK_HOME=/spark-2.0.0/dist	
 CMD ["./bin/spark-class", "org.apache.spark.deploy.master.Master"]
 
 
